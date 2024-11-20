@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhvvwAQb7wAP+EAAATrOgAyWkCAC3Q7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVUIiRERERERUUiREREREREVCREUzEEREVFJFVVMABUREUlUiIiRFVFVCUiIiRERUVEIiIiRERERFQiIiRERERFRSIiRVVEREVFIiJVVVREJEUiIlVVVEIkVCIiVVVUIiVFIiIlVSIiJUQiIiIiIiIkVSIiIiIiIiVFIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-navy pl-5">   
+        <ul class="navbar-nav">
+            <li class="nav-item" tabindex="0">
+                <a class="navbar-brand"  href="index.html">
+                    <img src="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAhvvwAQb7wAP+EAAATrOgAyWkCAC3Q7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVUIiRERERERUUiREREREREVCREUzEEREVFJFVVMABUREUlUiIiRFVFVCUiIiRERUVEIiIiRERERFQiIiRERERFRSIiRVVEREVFIiJVVVREJEUiIlVVVEIkVCIiVVVUIiVFIiIlVSIiJUQiIiIiIiIkVSIiIiIiIiVFIiIiIiIiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" height="25px" width="25px" alt="KazakhGuide Logo">
+                    KazakhGuide
+                </a>
+            </li>
+        </ul>
+          
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item" tabindex="0">
+                    <a class="nav-link" href="cities.html">Cities</a>
+                </li>
+                <li class="nav-item" tabindex="0">
+                    <a class="nav-link" href="tourist.html">Tourist</a>
+                </li>
+                <li class="nav-item" tabindex="0">
+                    <a class="nav-link" href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+
+            <div class="nav-login ml-auto d-flex">
+                <button id="mode-toggle">Toggle Mode</button>
+            </div>
+        </div>
+   </nav>
+
+    <section class="contacts">
+        <header>
+            <br><h2>Contacts</h2>
+            <h4>Leave your info:</h4>
+        </header>
+
+        <form class="form-container" onsubmit="return validateContactForm()">
+            <label for="fname">First Name</label> 
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <span id="fnameError" class="error-tooltip"></span>
+
+            <label for="fname">Last Name</label> 
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <span id="lnameError" class="error-tooltip"></span>
+
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" placeholder="Email..">
+            <span id="emailError" class="error-tooltip"></span>
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="France">France</option>
+            </select>
+            <span id="countryError" class="error-tooltip"></span>
+
+    
+            <label for="review">Why do you want to Kazakhstan?</label>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+            <span id="reviewError" class="error-tooltip"></span>
+
+            <div class="d-flex" style="width: 50%;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+            
+        </form>
+    </section>
+
+    <div id="btn-news-color" class="btn-group mt-2 mb-2 col-lg-12">
+        <button id="open-form" class="btn btn-primary btn-lg">Subscribe to Our Newsletter</button>
+
+    </div>
+    
+    <div id="popup-form" class="popup-form">
+        <div class="form-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscription-form" onsubmit="return validateEmail()">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+            <div id="message" class="success-message" style="display: none;"></div>
+        </div>
+    </div>
+
+    <div class="rating mt-3">
+        <h3>Rate our company:</h3>
+        <div class="stars">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <span class="rating_message" id="ratingMessage">No rating yet.</span>
+      </div>
+      
+    <footer>
+        <h3>Authors</h3>
+        <p>Tolegenov Baglan, Tuspekova Gulzhan, 2024</p>
+
+        <h3>Report Error</h3>
+        <p>If you want to report an error, or if you want to make a suggestion, send us an e-mail:
+            <a href="#">help@kazakhguide.com</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script> 
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value.trim();
+            const messageElement = document.getElementById('message');
+    
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                messageElement.style.display = 'block';
+                messageElement.style.color = 'red';
+                messageElement.textContent = 'Invalid email format. Please try again.';
+                return false; // Prevent form submission
+            }
+    
+            // If valid, show success message
+            messageElement.style.display = 'block';
+            messageElement.style.color = 'green';
+            messageElement.textContent = 'Thank you for subscribing!';
+    
+            // Optionally reset the form
+            document.getElementById('subscription-form').reset();
+            return false; // Prevent form submission as the action is handled by the script
+        }
+    </script>
+    
+    <script src="test.js"></script>
+
+</body>
+</html>

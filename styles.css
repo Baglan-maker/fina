@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Times, serif;
+    background-color: #ffffff;
+    color: #000000;
+
+}
+nav {
+    background-color: #00274d;
+    padding-left: 45px;
+    display: flex; 
+   
+}
+nav a {
+    font-size: 23px;
+    color: #ffffff;
+    margin: 5px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3, h4 {
+    color: #00274d;
+    font-weight: bold;
+}
+.bckgrnd-img-firstpage {
+    position: relative;
+    background-image: url("https://silkroaddestinations.com/wp-content/uploads/2017/01/kazaxstan.jpg"); 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .bckgrnd-img-firstpage {
+        background-position: top; 
+        background-attachment: scroll; 
+        height: 60vh; 
+    }
+}
+
+@media (max-width: 576px) {
+    .bckgrnd-img-firstpage {
+        height: 50vh;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.overlay h1 {
+    font-size: 6.5vw;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-left: 60px; 
+    margin-top: 150px;
+    line-height: 1;
+}
+.overlay h2 {
+    font-size: 2.62vw;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    margin-left: 70px; 
+    margin-top: -5px;
+}
+.carousel-item img {
+    max-height: 600px; 
+}
+.card-img-top {
+    max-height: 250px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 120%;
+    margin: 10px;
+    text-align: left;
+}
+footer h3 {
+    line-height: 0.8;
+}
+.contacts h2 {
+    text-align: center;
+    font-size: 250%;
+    line-height: 2;
+}
+.contacts h4 {
+    padding-left: 55px; 
+    font-size: 200%;
+}
+
+.form-container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 15px 50px;
+    font-size: 150%;
+}
+
+.error-tooltip {
+    display: none;
+    color: red;
+    font-size: 12px;
+    background-color: #f8d7da;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+  button {
+    width: 100%;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+.navbar-navy .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#btn-news-color {
+    margin-left: 50px;
+    width: 94%;
+    
+}
+
+.popup-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.popup-btn:hover {
+    background-color: #0056b3;
+}
+
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.color-btn {
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-btn:hover {
+    background-color: #0056b3;
+}
+
+.rating {
+    display: flex !important; 
+    flex-direction: column;  
+    align-items:  center;
+}
+
+  .stars {
+    display: flex !important;
+    margin-top: -15px;
+    margin-bottom: -6px;   
+  }
+
+    .star {
+    font-size: 50px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+  }
+
+  .star:hover {
+    transform: scale(1.5); 
+}
+  
+    .star.selected {
+    color: gold;
+    transform: scale(1.5); 
+
+  }
+
+   .rating_message {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+.datetime-container
+{
+    text-align: center;
+    color: #00274d;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.welcome {
+    text-align: center;
+    color: #00274d;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav-login {
+    margin-right: 30px;
+}
+
+
+body.dark-mode {
+    background-color: #000000;  
+    color: #e0e0e0;             
+}
+body.dark-mode .datetime-container {
+    color: #ffffff;          
+}
+
+body.dark-mode footer {
+    background-color: #333;  
+    color: #ffffff;            
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 120%;
+    margin: 10px;
+    text-align: left;
+}
+
+body.dark-mode footer h3 {
+    color: #ffffff;            
+    line-height: 0.8;
+}
+
+button {
+    padding: 10px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 200px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode .p-3.border.bg {
+    background-color: #333;    
+}
+
+body.dark-mode .p-3.border.bg h2 {
+    color: #fff;              
+}
+
+body.dark-mode .p-3.border.bg p {
+    color: #ccc;               /
+}
+
+
+body.dark-mode #greeting {
+    color: #fff;          
+}
+
+body.dark-mode #show-greeting {
+    background-color: #555;
+    color: #fff;             
+    border: none;
+}
+
+body.dark-mode #show-greeting:hover {
+    background-color: #666; 
+}
+
+body.dark-mode h2 {
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #333;   
+    color: #ddd;              
+    border: 1px solid #444;   
+}
+
+body.dark-mode .card-title {
+    color: #fff;            
+}
+
+body.dark-mode .card-text {
+    color: #ccc;             
+}
+
+body.dark-mode .contacts {
+    color: #ddd;
+}
+
+body.dark-mode .contacts h2,
+body.dark-mode .contacts h4 {
+    color: #fff; 
+}
+
+body.dark-mode .form-container {
+    color: #ddd; 
+}
+
+body.dark-mode .form-container label {
+    color: #fff;
+}
+
+body.dark-mode .form-container input, 
+body.dark-mode .form-container select, 
+body.dark-mode .form-container textarea {
+    background-color: #444; 
+    color: #fff; 
+    border: 1px solid #666;
+}
+
+body.dark-mode .form-container .btn-primary {
+    background-color: #007bff;
+}
+
+body.dark-mode .form-container .btn-secondary {
+    background-color: #6c757d;
+}
+
+body.dark-mode .form-container .btn-primary:hover,
+body.dark-mode .form-container .btn-secondary:hover {
+    filter: brightness(85%); 
+}
+
+body.dark-mode .form-container label {
+    color: #333; 
+}
+
+body.dark-mode #popup-form {
+    background-color: rgba(51, 51, 51, 0.9); 
+    color: #ddd;                            
+}
+
+body.dark-mode #popup-form .form-content {
+    background-color: rgba(68, 68, 68, 0.9);
+    border: 1px solid #555;               }
+
+body.dark-mode #popup-form label {
+    color: #fff;                            
+}
+
+body.dark-mode #popup-form input {
+    background-color: rgba(85, 85, 85, 0.9);
+    color: #fff;                             
+    border: 1px solid #666;                   
+}
+
+body.dark-mode #popup-form .submit-btn {
+    background-color: #007bff;                
+    color: #fff;                               
+}
+
+body.dark-mode .rating h3 {
+    color: #fff;              
+}
+body.dark-mode .welcome {
+    color: #fff; 
+}
+

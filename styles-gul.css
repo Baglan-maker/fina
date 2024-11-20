@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Times, serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+.descriptions {
+    font-size: 25px;
+    padding: 0 310px;
+    text-align: left;
+}
+.carousel-item img {
+    max-height: 600px; 
+}
+.descriptions-cities {
+    font-size: 2vw;
+    padding: 0 310px;
+}
+.city {
+    font-size: 20px;
+    padding-left: 50px
+}
+nav {
+    background-color: #00274d;
+    padding-left: 45px;
+    display: flex; 
+}  
+nav a {
+    font-size: 23px;
+    color: #ffffff;
+    margin: 5px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+h1, h2, h3, h4 {
+    color: #00274d;
+    font-weight: bold;
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 30px;
+    font-size: 120%;
+    margin: 10px;
+    text-align: left;
+}
+.navbar-navy .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.accordion-container {
+    width: 50%; 
+    margin: 0 auto; 
+    margin-top: 50px; 
+    text-align: center; 
+}
+
+.accordion-header {
+    background-color: #ffffff;
+    color: white;
+    cursor: pointer;
+    padding: 6px; 
+    font-size: 17px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2px; 
+}
+
+.accordion-header:hover {
+    background-color: #ffffff;
+}
+
+.accordion-body {
+    padding: 30px; 
+    background-color: #e3f2fd;
+    margin-bottom: 5px; 
+    font-size: 17px;
+    text-align: center;
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: #00274d;
+    color: white;
+    text-align: center;
+    padding: 6px; 
+    font-size: 17px;
+}
+
+.mt-5
+{
+    text-align: center;
+}
+
+.accordion-collapse{
+    overflow-y: hidden;
+    display: block;
+    visibility: visible;
+    max-height: fit-content;
+    height: 0;
+    transition: height 300ms ease-in-out;
+}
+.accordion-collapse.show{
+    transition: height 300ms ease-in-out;
+}
+.collapse:not(.show){
+    display: block;
+    &:not(.show){
+        display: block;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #000000;  
+    color: #e0e0e0;             
+}
+body.dark-mode .datetime-container {
+    color: #ffffff;          
+}
+
+body.dark-mode footer {
+    background-color: #333333;  
+    color: #ffffff;             
+    border-radius: 5px;
+    padding: 30px;
+    font-size: 120%;
+    margin: 10px;
+    text-align: left;
+}
+
+body.dark-mode footer h3 {
+    color: #ffffff;           
+    line-height: 0.8;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+#mode-toggle {
+        padding: 10px 50px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        width: 200px; 
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode .accordion-item {
+    background-color: #333;    
+    color: #ddd;               
+    border: 1px solid #333;     }
+
+body.dark-mode .accordion-button {
+    background-color: #333;     
+    color: #ddd;               
+}
+
+body.dark-mode .accordion-button.collapsed {
+    background-color: #333;     
+}
+
+body.dark-mode .accordion-body {
+    background-color: #333;     
+    color: #ccc;                
+}
+
+body.dark-mode .Tourist_Info h2, 
+body.dark-mode .Tourist_Info h3 {
+    color: #fff;                
+}
+
+body.dark-mode .card {
+    background-color: #333;     
+    color: #ddd;               
+    border: 1px solid #444;   
+}
+
+body.dark-mode .card-title {
+    color: #fff;              
+}
+
+body.dark-mode .card-text {
+    color: #ccc;                
+}
+
+body.dark-mode .card-img-top {
+    filter: brightness(0.8);    
+}
+
+body.dark-mode section h2 {
+    color: #fff; 
+}
+
+body.dark-mode #Cities {
+    color: #fff;          
+}
+
+body.dark-mode section h3 {
+    color: #fff; 
+}
+
+.card {
+    width: 100%;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00274d;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card-deck {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap; 
+}
